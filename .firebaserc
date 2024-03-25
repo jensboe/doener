@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "doener-96c7a": {
+      "hosting": {
+        "doener": [
+          "doener-96c7a"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "doener-96c7a"
+  }
+}
