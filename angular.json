@@ -27,12 +27,7 @@
             "styles": [
               "src/styles.css"
             ],
-            "scripts": [],
-            "server": "src/main.server.ts",
-            "prerender": true,
-            "ssr": {
-              "entry": "server.ts"
-            }
+            "scripts": []
           },
           "configurations": {
             "production": {
@@ -104,6 +99,23 @@
               "src/**/*.html"
             ]
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "version": 2
+          },
+          "configurations": {
+            "production": {
+              "buildTarget": "doener:build:production",
+              "serveTarget": "doener:serve:production"
+            },
+            "development": {
+              "buildTarget": "doener:build:development",
+              "serveTarget": "doener:serve:development"
+            }
+          },
+          "defaultConfiguration": "production"
         }
       }
     }
