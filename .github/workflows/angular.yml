@@ -24,5 +24,7 @@ jobs:
             ${{ runner.os }}-
       - name: npm install
         run: npm install --include=dev
+      - name: npm install angular cli
+        run:  npm install -g @angular/cli
       - name: Testing
         run: ng test --no-watch --no-progress --browsers=ChromeHeadless
