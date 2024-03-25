@@ -23,6 +23,6 @@ jobs:
             ${{ runner.os }}-build-
             ${{ runner.os }}-
       - name: npm install
-        run: npm install
+        run: npm install --include=dev
       - name: Testing
         run: ng test --no-watch --no-progress --browsers=ChromeHeadless
