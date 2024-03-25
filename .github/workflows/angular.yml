@@ -24,3 +24,5 @@ jobs:
             ${{ runner.os }}-
       - name: npm install
         run: npm install
+      - name: Testing
+        run: ng test --no-watch --no-progress --browsers=ChromeHeadless
