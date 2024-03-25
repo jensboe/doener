@@ -2,8 +2,8 @@ import { NgModule, importProvidersFrom } from '@angular/core';
 import { BrowserModule, provideClientHydration } from "@angular/platform-browser";
 import { AppComponent } from "./app.component";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
+import { RestaurantsModule } from './restaurants/restaurants.module';
 import { AppRoutingModule } from "./app-routing.module";
-import { Router } from "@angular/router";
 
 import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
 import { getFirestore, provideFirestore } from '@angular/fire/firestore';
@@ -14,6 +14,7 @@ import { getFirestore, provideFirestore } from '@angular/fire/firestore';
       BrowserModule,
       BrowserAnimationsModule,
       AppRoutingModule,
+      RestaurantsModule
     ],
     declarations: [
       AppComponent,
