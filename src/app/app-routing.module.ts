@@ -4,20 +4,26 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 
 export const routes: Routes = [
   {
-      path: '**',
-      component: PageNotFoundComponent,
-      title: 'App'
-  }
+    path:'',
+    redirectTo: 'restaurants/list',
+    pathMatch: 'full'
+  },
+  {
+    path: '**',
+    component: PageNotFoundComponent,
+    title: 'App'
+  },
+
 ];
 
 @NgModule({
   imports: [
     RouterModule.forRoot(routes,
-    {
-      enableTracing: false, // <-- debugging purposes only
-    }
-  )
-],
+      {
+        enableTracing: false, // <-- debugging purposes only
+      }
+    )
+  ],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
