@@ -7,6 +7,7 @@ import { AppRoutingModule } from "./app-routing.module";
 
 import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
 import { getFirestore, provideFirestore } from '@angular/fire/firestore';
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 
 
 @NgModule({
@@ -32,6 +33,7 @@ import { getFirestore, provideFirestore } from '@angular/fire/firestore';
           "measurementId":"G-7EV8PVRVZ8"
         }))),
         importProvidersFrom(provideFirestore(() => getFirestore())),
+        provideAnimationsAsync(),
     ]
   })
   export class AppModule {
