@@ -1,9 +1,31 @@
-<div>
-  <ul>
-    <li><a routerLink="/restaurants/list" routerLinkActive="active">Restaurant list</a></li>
-    <li><a routerLink="/restaurants/add" routerLinkActive="active">Restaurant add</a></li>
-  </ul>
-</div>
-<main>
-  <router-outlet />
-</main>
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #drawer class="sidenav" fixedInViewport
+      [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+      [mode]="(isHandset$ | async) ? 'over' : 'side'"
+      [opened]="(isHandset$ | async) === false">
+    <mat-toolbar>Menu</mat-toolbar>
+    <mat-nav-list>
+      <a mat-list-item routerLink="/restaurants/list" routerLinkActive="active">list restaurant</a>
+      <a mat-list-item routerLink="/restaurants/add" routerLinkActive="active">add restaurant</a>
+      <a mat-list-item routerLink="/dishes/list" routerLinkActive="active">list dishes</a>
+      <a mat-list-item routerLink="/dishes/add" routerLinkActive="active">add dishes</a>
+      <a mat-list-item routerLink="/orders/list" routerLinkActive="active">list orders</a>
+      <a mat-list-item routerLink="/orders/add" routerLinkActive="active">add orders</a>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar color="primary">
+      @if (isHandset$ | async) {
+        <button
+          type="button"
+          aria-label="Toggle sidenav"
+          mat-icon-button
+          (click)="drawer.toggle()">
+          <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+        </button>
+      }
+      <span>doener</span>
+    </mat-toolbar>
+    <router-outlet />
+  </mat-sidenav-content>
+</mat-sidenav-container>

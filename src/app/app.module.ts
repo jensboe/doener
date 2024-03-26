@@ -8,6 +8,11 @@ import { AppRoutingModule } from "./app-routing.module";
 import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
 import { getFirestore, provideFirestore } from '@angular/fire/firestore';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatButtonModule } from '@angular/material/button';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatIconModule } from '@angular/material/icon';
+import { MatListModule } from '@angular/material/list';
 
 
 @NgModule({
@@ -15,7 +20,12 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
       BrowserModule,
       BrowserAnimationsModule,
       RestaurantsModule,
-      AppRoutingModule
+      AppRoutingModule,
+      MatToolbarModule,
+      MatButtonModule,
+      MatSidenavModule,
+      MatIconModule,
+      MatListModule
     ],
     declarations: [
       AppComponent,
