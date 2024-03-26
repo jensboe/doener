@@ -2,7 +2,6 @@ import { Component, inject } from '@angular/core';
 import { Firestore, collection, collectionData } from '@angular/fire/firestore';
 import { Observable } from 'rxjs';
 import { Dish } from '../dish';
-import { Restaurant } from '../../restaurants/restaurant';
 
 @Component({
   selector: 'app-list',
