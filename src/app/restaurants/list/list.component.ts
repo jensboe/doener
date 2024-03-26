@@ -1,6 +1,5 @@
 import { Component, inject } from '@angular/core';
 import { Restaurant } from '../restaurant';
-import { RESTAURANTS } from '../mock.restaurants';
 import { Firestore, collection, collectionData } from '@angular/fire/firestore';
 import { Observable } from 'rxjs';
 
