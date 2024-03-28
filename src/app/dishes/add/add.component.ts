@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { FirestoreService } from '../firestore.service';
+import { Dish } from '../dish';
 
 @Component({
   selector: 'app-add',
@@ -7,4 +9,17 @@ import { Component } from '@angular/core';
 })
 export class AddComponent {
 
+  dish: Dish;
+
+  constructor(public dataService: FirestoreService) {
+    this.dish = {
+      name: '',
+      additionalText: '',
+      price: 0,
+      restaurantRef: ''
+    }
+  }
+  addDish(dish: Dish) {
+    this.dataService.addDish(dish);
+  }
 }
