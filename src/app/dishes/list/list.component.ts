@@ -4,7 +4,7 @@ import { Observable } from 'rxjs';
 import { Dish } from '../dish';
 
 @Component({
-  selector: 'dishes-list',
+  selector: 'app-dishes-list',
   templateUrl: './list.component.html',
   styleUrl: './list.component.css'
 })

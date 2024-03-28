@@ -4,7 +4,7 @@ import { Firestore, collection, collectionData } from '@angular/fire/firestore';
 import { Observable } from 'rxjs';
 
 @Component({
-  selector: 'restaurant-list',
+  selector: 'app-restaurant-list',
   templateUrl: './list.component.html',
   styleUrl: './list.component.css'
 })
