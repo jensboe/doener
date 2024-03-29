@@ -1,0 +1,2 @@
+npx --no-install commitlint --edit "$1"
+ng test --no-watch --no-progress --browsers=ChromeHeadless
