@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
-  <file source-language="en-US" datatype="plaintext" original="ng2.template">
+  <file source-language="en" datatype="plaintext" original="ng2.template">
     <body>
       <trans-unit id="2419870031449257215" datatype="html">
         <source>list restaurant</source>
@@ -42,6 +42,76 @@
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/app.component.html</context>
           <context context-type="linenumber">13,14</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4252249568328341678" datatype="html">
+        <source>Oops! You&apos;ve Stumbled Upon the Abyss</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/page-not-found/page-not-found.component.html</context>
+          <context context-type="linenumber">1,2</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3358772882849396278" datatype="html">
+        <source>Our highly trained squirrels couldn&apos;t find the page you were looking for.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/page-not-found/page-not-found.component.html</context>
+          <context context-type="linenumber">2,3</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3889344321555891011" datatype="html">
+        <source>Here are some possible reasons:</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/page-not-found/page-not-found.component.html</context>
+          <context context-type="linenumber">3,4</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5019104004915233497" datatype="html">
+        <source>You mistyped the URL. Seriously, how could you?</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/page-not-found/page-not-found.component.html</context>
+          <context context-type="linenumber">5,6</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6333479562475440898" datatype="html">
+        <source>The page is on vacation. It&apos;s sipping piña coladas on a tropical island.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/page-not-found/page-not-found.component.html</context>
+          <context context-type="linenumber">6,7</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1608569508585264770" datatype="html">
+        <source>Gremlins ate the code. We suspect they&apos;re in cahoots with the squirrels.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/page-not-found/page-not-found.component.html</context>
+          <context context-type="linenumber">7,8</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6185011037542854895" datatype="html">
+        <source>But don&apos;t worry, it&apos;s definitely not our fault. We&apos;re perfect.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/page-not-found/page-not-found.component.html</context>
+          <context context-type="linenumber">9,10</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2797119992290436898" datatype="html">
+        <source>Feel free to <x id="START_LINK" ctype="x-a" equiv-text="&lt;a href=&quot;https://www.google.com/search?q=return-to-safety&amp;tbm=isch&quot;&gt;"/>return to safety<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/> or explore the <x id="START_LINK_1" equiv-text="&lt;a href=&quot;https://www.google.com/search?q=secret+unicorn+lair&amp;tbm=isch-unicorn-lair&quot;&gt;"/>secret unicorn lair<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/>.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/page-not-found/page-not-found.component.html</context>
+          <context context-type="linenumber">10,11</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8825742088893444175" datatype="html">
+        <source>And remember, blame the user. Always.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/page-not-found/page-not-found.component.html</context>
+          <context context-type="linenumber">11,12</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4595705742024690179" datatype="html">
+        <source>This text could perhaps have been created by an AI.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/page-not-found/page-not-found.component.html</context>
+          <context context-type="linenumber">12</context>
         </context-group>
       </trans-unit>
     </body>
