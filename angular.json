@@ -11,7 +11,7 @@
       "prefix": "app",
       "i18n": {
         "sourceLocale": {
-          "code": "en-US",
+          "code": "en",
           "baseHref": ""
         },
         "locales": {
