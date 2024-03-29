@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/jensboe/doener/compare/v1.0.1...v1.1.0) (2024-03-29)
+
+
+### Features
+
+* **lang:** Add de language support ([#30](https://github.com/jensboe/doener/issues/30)) ([e457800](https://github.com/jensboe/doener/commit/e457800aaeea4dcc62ea13e7bad5361bf9090fc0))
+
 ## [1.0.1](https://github.com/jensboe/doener/compare/v1.0.0...v1.0.1) (2024-03-29)
 
 
