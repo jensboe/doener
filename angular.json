@@ -12,12 +12,12 @@
       "i18n": {
         "sourceLocale": {
           "code": "en-US",
-          "baseHref": "en-US"
+          "baseHref": ""
         },
         "locales": {
           "de": {
             "translation": "src/locale/messages.de.xlf",
-            "baseHref": "de"
+            "baseHref": ""
           }
         }
       },
