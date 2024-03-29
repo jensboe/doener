@@ -1,3 +1,10 @@
+## [1.0.1](https://github.com/jensboe/doener/compare/v1.0.0...v1.0.1) (2024-03-29)
+
+
+### Bug Fixes
+
+* **ci:** Cleaning release process ([#28](https://github.com/jensboe/doener/issues/28)) ([cc1a196](https://github.com/jensboe/doener/commit/cc1a1968d373121d123a6ba842d6a277b39a7af0))
+
 # 1.0.0 (2024-03-29)
 
 
