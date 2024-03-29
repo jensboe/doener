@@ -27,8 +27,8 @@ describe('BaseComponent', () => {
         RouterModule,
       ],
       providers: [
-        provideRouter([{path: '', component: AppComponent}])
-    ]
+        provideRouter([{ path: '', component: AppComponent }])
+      ]
     }).compileComponents();
   }));
 

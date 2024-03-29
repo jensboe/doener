@@ -11,18 +11,16 @@ import { MatButtonModule } from '@angular/material/button';
 import {MatSelectModule} from '@angular/material/select';
 
 @NgModule({
-  declarations: [
-    ListComponent,
-    AddComponent
-  ],
-  imports: [
-    CommonModule,
-    DishesRoutingModule,
-    FormsModule,
-    MatFormFieldModule,
-    MatInputModule,
-    MatButtonModule,
-    MatSelectModule
-  ]
+    imports: [
+        CommonModule,
+        DishesRoutingModule,
+        FormsModule,
+        MatFormFieldModule,
+        MatInputModule,
+        MatButtonModule,
+        MatSelectModule,
+        ListComponent,
+        AddComponent
+    ]
 })
 export class DishesModule { }

@@ -7,16 +7,14 @@ import { ListComponent } from './list/list.component';
 
 
 @NgModule({
-  declarations: [
-    AddComponent,
-    ListComponent
-  ],
-  imports: [
-    CommonModule,
-    RestaurantsRoutingModule,
-  ],
-  exports: [
-    AddComponent
-  ]
+    imports: [
+        CommonModule,
+        RestaurantsRoutingModule,
+        AddComponent,
+        ListComponent,
+    ],
+    exports: [
+        AddComponent
+    ]
 })
 export class RestaurantsModule { }
