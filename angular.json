@@ -9,6 +9,18 @@
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
+      "i18n": {
+        "sourceLocale": {
+          "code": "en",
+          "baseHref": ""
+        },
+        "locales": {
+          "de": {
+            "translation": "src/locale/messages.de.xlf",
+            "baseHref": ""
+          }
+        }
+      },
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:application",
@@ -16,6 +28,7 @@
             "outputPath": "dist/doener",
             "index": "src/index.html",
             "browser": "src/main.ts",
+            "localize":true,
             "polyfills": [
               "zone.js"
             ],
@@ -49,7 +62,8 @@
             "development": {
               "optimization": false,
               "extractLicenses": false,
-              "sourceMap": true
+              "sourceMap": true,
+              "localize": ["de"]
             }
           },
           "defaultConfiguration": "production"
