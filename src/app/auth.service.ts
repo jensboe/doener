@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Auth, signInWithEmailAndPassword, signOut } from '@angular/fire/auth';
+import { Auth, signInWithEmailAndPassword } from '@angular/fire/auth';
 
 
 @Injectable({
@@ -17,7 +17,4 @@ export class AuthService {
     this.auth.signOut()
   }
 
-  async isLoggedin() {
-    return !! await this.auth.currentUser
-  }
 }
