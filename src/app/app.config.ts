@@ -5,6 +5,7 @@ import { routes } from './app.routes';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
 import { getFirestore, provideFirestore } from '@angular/fire/firestore';
+import { getAuth, provideAuth } from '@angular/fire/auth';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 
 export const appConfig: ApplicationConfig = {
@@ -26,6 +27,8 @@ export const appConfig: ApplicationConfig = {
             "measurementId": "G-7EV8PVRVZ8"
         }))),
         importProvidersFrom(provideFirestore(() => getFirestore())),
+        importProvidersFrom(provideAuth(() => getAuth())),
+
         provideAnimationsAsync(),
         {
             provide: DEFAULT_CURRENCY_CODE,
