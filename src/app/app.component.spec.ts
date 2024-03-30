@@ -16,8 +16,7 @@ describe('BaseComponent', () => {
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [AppComponent],
-      imports: [
+    imports: [
         NoopAnimationsModule,
         MatButtonModule,
         MatIconModule,
@@ -25,11 +24,12 @@ describe('BaseComponent', () => {
         MatSidenavModule,
         MatToolbarModule,
         RouterModule,
-      ],
-      providers: [
+        AppComponent,
+    ],
+    providers: [
         provideRouter([{ path: '', component: AppComponent }])
-      ]
-    }).compileComponents();
+    ]
+}).compileComponents();
   }));
 
   beforeEach(() => {

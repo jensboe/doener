@@ -9,7 +9,7 @@ import { NgFor, AsyncPipe, CurrencyPipe } from '@angular/common';
     templateUrl: './list.component.html',
     styleUrl: './list.component.css',
     standalone: true,
-    imports: [NgFor, AsyncPipe, CurrencyPipe]
+    imports: [NgFor, AsyncPipe, CurrencyPipe],
 })
 export class ListComponent {
   firestore: Firestore = inject(Firestore)
