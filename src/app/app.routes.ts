@@ -11,6 +11,10 @@ export const routes: Routes = [
         loadChildren: () => import('./dishes/dishes.routes').then(mod => mod.routes)
     },
     {
+      path:'login',
+      component: LoginComponent,
+    },
+    {
       path:'',
       redirectTo: 'restaurants/list',
       pathMatch: 'full'
