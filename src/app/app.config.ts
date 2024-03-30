@@ -28,7 +28,6 @@ export const appConfig: ApplicationConfig = {
         }))),
         importProvidersFrom(provideFirestore(() => getFirestore())),
         importProvidersFrom(provideAuth(() => getAuth())),
-
         provideAnimationsAsync(),
         {
             provide: DEFAULT_CURRENCY_CODE,
