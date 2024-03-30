@@ -4,17 +4,13 @@ import { ListComponent } from './list/list.component';
 
 export const routes: Routes = [
   {
-    path: 'dishes/add',
+    path: 'add',
     component: AddComponent,
     title: 'Add dish'
   },
   {
-    path: 'dishes/list',
+    path: 'list',
     component: ListComponent,
     title: 'dish list'
   },
-  {
-    path: 'restaurants',
-    redirectTo: 'restaurants/list'
-  }
 ];

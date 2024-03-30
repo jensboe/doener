@@ -1,13 +1,14 @@
 import { Routes } from '@angular/router';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { LoginComponent } from './login/login.component';
 
 export const routes: Routes = [
     {
-        path: '',
+        path: 'restaurants',
         loadChildren: () => import('./restaurants/restaurants.routes').then(mod => mod.routes)
     },
     {
-        path: '',
+        path: 'dishes',
         loadChildren: () => import('./dishes/dishes.routes').then(mod => mod.routes)
     },
     {
