@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/jensboe/doener/compare/v1.1.0...v1.2.0) (2024-03-30)
+
+
+### Features
+
+* **pwa:** Add pwa ([#32](https://github.com/jensboe/doener/issues/32)) ([0fe0780](https://github.com/jensboe/doener/commit/0fe0780f6e4d30ea6524873a0d2acec3bbdf432b))
+
 # [1.1.0](https://github.com/jensboe/doener/compare/v1.0.1...v1.1.0) (2024-03-29)
 
 
