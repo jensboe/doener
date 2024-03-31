@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
-import { Auth, signInWithEmailAndPassword } from '@angular/fire/auth';
+import { Auth, createUserWithEmailAndPassword, getAuth, signInWithEmailAndPassword } from '@angular/fire/auth';
+import { updateProfile } from '@firebase/auth';
 import { BehaviorSubject,  } from 'rxjs';
 
 
@@ -24,6 +25,18 @@ export class AuthService {
 
   async login(email: string, password: string) {
     await signInWithEmailAndPassword(this.auth, email, password);
+  }
+
+  async register(email: string, password: string, displayname: string) {
+    await createUserWithEmailAndPassword(getAuth(), email, password)
+    .then((userCredential) => {
+      updateProfile(userCredential.user,{displayName: displayname})
+        this.login(email, password)
+    })
+    .catch((err) => {
+      console.log(err.code);
+      console.log(err.message);
+    })
   }
 
   logout()  {
