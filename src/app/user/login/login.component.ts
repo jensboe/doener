@@ -25,7 +25,7 @@ import { Router } from '@angular/router';
   styleUrl: './login.component.css'
 })
 export class LoginComponent implements OnDestroy{
-  private auth: AuthService = inject(AuthService);
+  public auth: AuthService = inject(AuthService);
   private router: Router = inject(Router)
 
   hide = true;
