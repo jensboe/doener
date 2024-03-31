@@ -13,6 +13,7 @@ export class AuthService {
   loggedIn$ = this.loggedIn.asObservable();
   loggedOut$ = this.loggedOut.asObservable();
 
+
   constructor(private auth: Auth) {
     this.auth.onAuthStateChanged((user) => {
       if(user) {
@@ -25,6 +26,9 @@ export class AuthService {
         this.loggedIn.next(false)
       }
     })
+  }
+  get currentUser() {
+    return this.auth.currentUser
   }
 
   async login(email: string, password: string) {

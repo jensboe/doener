@@ -1,20 +1,20 @@
-<div *ngIf="user$">
+<div *ngIf="user">
     <div>
-        Displayname: {{(user$ | async)?.displayName}}
+        Displayname: {{user.displayName}}
     </div>
     <div>
-        E-Mail: {{(user$ | async)?.email}}
+        E-Mail: {{user.email}}
     </div>
     <div>
-        email verified: {{(user$ | async)?.emailVerified}}
+        email verified: {{user.emailVerified}}
     </div>
     <div>
-        Anonymous: {{(user$ | async)?.isAnonymous}}
+        Anonymous: {{user.isAnonymous}}
     </div>
     <div>
-        Phone: {{(user$ | async)?.phoneNumber}}
+        Phone: {{user.phoneNumber}}
     </div>
     <div>
-        uid: {{(user$ | async)?.uid}}
+        uid: {{user.uid}}
     </div>
 </div>

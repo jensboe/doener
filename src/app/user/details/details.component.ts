@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
-import { Component, inject } from '@angular/core';
-import { Auth, user } from '@angular/fire/auth';
+import { Component, OnInit, inject } from '@angular/core';
+import { AuthService } from '../../auth.service';
+import { User } from '@angular/fire/auth';
 
 @Component({
   selector: 'app-details',
@@ -9,7 +10,12 @@ import { Auth, user } from '@angular/fire/auth';
   templateUrl: './details.component.html',
   styleUrl: './details.component.css'
 })
-export class DetailsComponent {
-  private auth: Auth = inject(Auth);
-  user$ = user(this.auth);
+export class DetailsComponent implements OnInit {
+
+  private auth = inject(AuthService);
+  user?: User | null;
+
+  ngOnInit(): void {
+    this.user = this.auth.currentUser
+  }
 }
