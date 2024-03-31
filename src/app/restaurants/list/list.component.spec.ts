@@ -1,24 +1,33 @@
-// import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-// import { ListComponent } from './list.component';
+import { ListComponent } from './list.component';
 
+import { FirestoreService } from '../firestore.service';
+import { of } from 'rxjs';
 
-// describe('ListComponent', () => {
-//   let component: ListComponent;
-//   let fixture: ComponentFixture<ListComponent>;
+describe('ListRestaurantsComponent', () => {
+  let component: ListComponent;
+  let fixture: ComponentFixture<ListComponent>;
+  const FirestoreServiceStub: Partial<FirestoreService> = {
+    getRestaurants() {
+      return of();
+    },
+  };
 
-//   beforeEach(async () => {
-//     await TestBed.configureTestingModule({
-//       declarations: [ListComponent],
-//     })
-//     .compileComponents();
-    
-//     fixture = TestBed.createComponent(ListComponent);
-//     component = fixture.componentInstance;
-//     fixture.detectChanges();
-//   });
+  beforeEach(async () => {
+    await TestBed.configureTestingModule({
+      imports: [ListComponent],
+      providers: [
+        { provide: FirestoreService, useValue: FirestoreServiceStub },
+      ],
+    }).compileComponents();
 
-//   it('should create', () => {
-//     expect(component).toBeTruthy();
-//   });
-// });
+    fixture = TestBed.createComponent(ListComponent);
+    component = fixture.componentInstance;
+    fixture.detectChanges();
+  });
+
+  it('should create', () => {
+    expect(component).toBeTruthy();
+  });
+});

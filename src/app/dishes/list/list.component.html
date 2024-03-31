@@ -1,3 +1,5 @@
 <ul>
-    <li *ngFor="let dish of dishes$ | async">{{dish.name}} {{dish.price | currency }}</li>
+  <li *ngFor="let dish of dishes$ | async">
+    {{ dish.name }} {{ dish.price | currency }}
+  </li>
 </ul>

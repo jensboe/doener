@@ -8,7 +8,6 @@ import { MatInputModule } from '@angular/material/input';
 import { AuthService } from '../../auth.service';
 import { Router } from '@angular/router';
 
-
 @Component({
   selector: 'app-login',
   standalone: true,
@@ -18,36 +17,36 @@ import { Router } from '@angular/router';
     MatInputModule,
     MatButtonModule,
     MatIconModule,
-    FormsModule
+    FormsModule,
   ],
   templateUrl: './login.component.html',
-  styleUrl: './login.component.css'
+  styleUrl: './login.component.css',
 })
-export class LoginComponent{
+export class LoginComponent {
   public auth: AuthService = inject(AuthService);
-  private router: Router = inject(Router)
+  private router: Router = inject(Router);
 
   hide = true;
   email: string;
   password: string;
 
   constructor() {
-    this.email ='';
-    this.password ='';
+    this.email = '';
+    this.password = '';
   }
 
   login() {
-    this.auth.login(this.email, this.password)
-    .then(() => {
-      this.router.navigate(['restaurants/list'])
-    })
-    .catch(err => {
-      console.log(err.code);
-      console.log(err.message);
-    })
-
+    this.auth
+      .login(this.email, this.password)
+      .then(() => {
+        this.router.navigate(['restaurants/list']);
+      })
+      .catch((err) => {
+        console.log(err.code);
+        console.log(err.message);
+      });
   }
   logout() {
-    this.auth.logout()
+    this.auth.logout();
   }
 }

@@ -6,11 +6,11 @@ export const routes: Routes = [
   {
     path: 'add',
     component: AddComponent,
-    title: 'Add restaurant'
+    title: 'Add restaurant',
   },
   {
     path: 'list',
     component: ListComponent,
-    title: 'Restaurant list'
+    title: 'Restaurant list',
   },
 ];

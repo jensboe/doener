@@ -3,7 +3,7 @@ import { TestBed } from '@angular/core/testing';
 import { FirestoreService } from './firestore.service';
 import { Firestore } from '@angular/fire/firestore';
 
-describe('DishFirestoreService', () => {
+describe('RestaurantFirestoreService', () => {
   let service: FirestoreService;
   const FireStoreStub = jasmine.createSpyObj('Firestore', ['dummy']);
 

@@ -1,35 +1,42 @@
-<h1> add dish </h1>
+<h1>add dish</h1>
 <p>
-
-    <mat-form-field appearance="fill">
-        <mat-label>menu number</mat-label>
-        <input matInput placeholder="42" type="number" [(ngModel)]="dish.id">
-        <mat-hint>Number of the dish</mat-hint>
-    </mat-form-field>
+  <mat-form-field appearance="fill">
+    <mat-label>menu number</mat-label>
+    <input matInput placeholder="42" type="number" [(ngModel)]="dish.id" />
+    <mat-hint>Number of the dish</mat-hint>
+  </mat-form-field>
 </p>
 <p>
-
-    <mat-form-field appearance="fill">
-        <mat-label>name</mat-label>
-        <input matInput placeholder="Name" [(ngModel)]="dish.name">
-        <mat-hint>Name of the dish</mat-hint>
-    </mat-form-field>
+  <mat-form-field appearance="fill">
+    <mat-label>name</mat-label>
+    <input matInput placeholder="Name" [(ngModel)]="dish.name" />
+    <mat-hint>Name of the dish</mat-hint>
+  </mat-form-field>
 </p>
 <p>
-    <mat-form-field appearance="fill">
-        <mat-label>description</mat-label>
-        <input matInput placeholder="Description" [(ngModel)]="dish.additionalText">
-        <mat-hint>Short description</mat-hint>
-    </mat-form-field>
+  <mat-form-field appearance="fill">
+    <mat-label>description</mat-label>
+    <input
+      matInput
+      placeholder="Description"
+      [(ngModel)]="dish.additionalText"
+    />
+    <mat-hint>Short description</mat-hint>
+  </mat-form-field>
 </p>
 <p>
-    <mat-form-field appearance="fill">
-        <mat-label>price</mat-label>
-        <input matInput placeholder="Price" type="number" suf
-        [(ngModel)]="dish.price"><span matTextSuffix="">€</span>
-        <mat-hint>Price</mat-hint>
-    </mat-form-field>
+  <mat-form-field appearance="fill">
+    <mat-label>price</mat-label>
+    <input
+      matInput
+      placeholder="Price"
+      type="number"
+      suf
+      [(ngModel)]="dish.price"
+    /><span matTextSuffix="">€</span>
+    <mat-hint>Price</mat-hint>
+  </mat-form-field>
 </p>
 <p>
-    <button mat-raised-button (click)="addDish(dish)">Submit</button>
+  <button mat-raised-button (click)="addDish(dish)">Submit</button>
 </p>

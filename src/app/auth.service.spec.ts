@@ -30,8 +30,6 @@ describe('AuthService', () => {
         expect(value).toBeTrue();
       });
     });
-    
-
   });
 
   describe('getUser', () => {

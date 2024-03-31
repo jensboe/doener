@@ -1,3 +1,3 @@
 export interface Restaurant {
-    name: string;
+  name: string;
 }

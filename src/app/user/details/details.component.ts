@@ -6,16 +6,15 @@ import { User } from '@angular/fire/auth';
 @Component({
   selector: 'app-details',
   standalone: true,
-  imports: [CommonModule,],
+  imports: [CommonModule],
   templateUrl: './details.component.html',
-  styleUrl: './details.component.css'
+  styleUrl: './details.component.css',
 })
 export class DetailsComponent implements OnInit {
-
   private auth = inject(AuthService);
   user?: User | null;
 
   ngOnInit(): void {
-    this.user = this.auth.currentUser
+    this.user = this.auth.currentUser;
   }
 }

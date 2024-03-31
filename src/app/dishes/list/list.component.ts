@@ -1,22 +1,21 @@
-import { Component, inject } from '@angular/core';
-import { Firestore, collection, collectionData } from '@angular/fire/firestore';
+import { Component, OnInit, inject } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Dish } from '../dish';
 import { NgFor, AsyncPipe, CurrencyPipe } from '@angular/common';
+import { FirestoreService } from '../firestore.service';
 
 @Component({
-    selector: 'app-dishes-list',
-    templateUrl: './list.component.html',
-    styleUrl: './list.component.css',
-    standalone: true,
-    imports: [NgFor, AsyncPipe, CurrencyPipe],
+  selector: 'app-dishes-list',
+  templateUrl: './list.component.html',
+  styleUrl: './list.component.css',
+  standalone: true,
+  imports: [NgFor, AsyncPipe, CurrencyPipe],
 })
-export class ListComponent {
-  firestore: Firestore = inject(Firestore)
-  dishes$: Observable<Dish[]>;
+export class ListComponent implements OnInit {
+  firestore = inject(FirestoreService);
+  dishes$?: Observable<Dish[]>;
 
-  constructor() {
-    const aCollection = collection(this.firestore, 'dishes')
-    this.dishes$ = collectionData(aCollection) as Observable<Dish[]>;
+  ngOnInit(): void {
+    this.dishes$ = this.firestore.getDishes();
   }
 }

@@ -1,9 +1,9 @@
 name: Angular CI
 on:
   push:
-    branches: [ main ]
+    branches: [main]
   pull_request:
-    branches: [ main ]
+    branches: [main]
   workflow_dispatch:
 jobs:
   test:
@@ -29,7 +29,7 @@ jobs:
       - name: npm install
         run: npm install --include=dev
       - name: npm install angular cli
-        run:  npm install -g @angular/cli
+        run: npm install -g @angular/cli
       - name: Testing
         run: ng test --no-watch --no-progress --browsers=ChromeHeadless
       - name: Upload coverage reports to Codecov
@@ -56,6 +56,6 @@ jobs:
       - name: npm install
         run: npm install --include=dev
       - name: npm install angular cli
-        run:  npm install -g @angular/cli
+        run: npm install -g @angular/cli
       - name: Lint
         run: ng lint

@@ -8,16 +8,16 @@ export const routes: Routes = [
   {
     path: 'login',
     component: LoginComponent,
-    canActivate: [loggedOutGuard]
+    canActivate: [loggedOutGuard],
   },
   {
     path: 'detail',
     component: DetailsComponent,
-    canActivate: [loggedInGuard]
+    canActivate: [loggedInGuard],
   },
   {
     path: 'register',
     component: RegisterComponent,
-    canActivate: [loggedOutGuard]
+    canActivate: [loggedOutGuard],
   },
 ];
