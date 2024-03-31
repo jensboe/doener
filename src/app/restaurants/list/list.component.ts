@@ -1,8 +1,8 @@
-import { Component, inject } from '@angular/core';
+import { Component, OnInit, inject } from '@angular/core';
 import { Restaurant } from '../restaurant';
-import { Firestore, collection, collectionData } from '@angular/fire/firestore';
 import { Observable } from 'rxjs';
 import { NgFor, AsyncPipe } from '@angular/common';
+import { FirestoreService } from '../firestore.service';
 
 @Component({
     selector: 'app-restaurant-list',
@@ -11,12 +11,11 @@ import { NgFor, AsyncPipe } from '@angular/common';
     standalone: true,
     imports: [NgFor, AsyncPipe]
 })
-export class ListComponent {
-  firestore: Firestore = inject(Firestore)
-  restaurants$: Observable<Restaurant[]>;
+export class ListComponent implements OnInit{
+  firestore = inject(FirestoreService)
+  restaurants$?: Observable<Restaurant[]>;
 
-  constructor() {
-    const aCollection = collection(this.firestore, 'restaurants')
-    this.restaurants$ = collectionData(aCollection) as Observable<Restaurant[]>;
+  ngOnInit(): void {
+    this.restaurants$ = this.firestore.getRestaurants()
   }
 }
