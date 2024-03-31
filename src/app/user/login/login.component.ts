@@ -6,8 +6,9 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatFormFieldModule, MatLabel } from '@angular/material/form-field';
 import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
-import { Subscription } from 'rxjs';
 import { AuthService } from '../../auth.service';
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-login',
@@ -25,6 +26,7 @@ import { AuthService } from '../../auth.service';
 })
 export class LoginComponent implements OnDestroy{
   private auth: AuthService = inject(AuthService);
+  private router: Router = inject(Router)
 
   hide = true;
   email: string;
@@ -41,6 +43,13 @@ export class LoginComponent implements OnDestroy{
   }
   login() {
     this.auth.login(this.email, this.password)
+    .then((bla) => {
+      this.router.navigate(['restaurants/list'])
+    })
+    .catch(err => {
+      console.log(err.code);
+      console.log(err.message);
+    })
 
   }
   logout() {

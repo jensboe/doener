@@ -7,10 +7,8 @@ import { Auth, signInWithEmailAndPassword } from '@angular/fire/auth';
 })
 export class AuthService {
 
-  constructor(private auth: Auth) { }
-
-  login(email: string, password: string) {
-    signInWithEmailAndPassword(this.auth, email, password);
+  async login(email: string, password: string) {
+    await signInWithEmailAndPassword(this.auth, email, password);
   }
 
   logout()  {
