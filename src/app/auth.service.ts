@@ -9,15 +9,19 @@ import { BehaviorSubject,  } from 'rxjs';
 })
 export class AuthService {
   loggedIn = new BehaviorSubject<boolean>(false);
+  loggedOut = new BehaviorSubject<boolean>(false);
   loggedIn$ = this.loggedIn.asObservable();
+  loggedOut$ = this.loggedOut.asObservable();
 
   constructor(private auth: Auth) {
     this.auth.onAuthStateChanged((user) => {
       if(user) {
         this.loggedIn.next(true)
+        this.loggedOut.next(false)
       }
       else
       {
+        this.loggedOut.next(true)
         this.loggedIn.next(false)
       }
     })

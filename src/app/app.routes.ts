@@ -1,14 +1,17 @@
 import { Routes } from '@angular/router';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { loggedInGuard } from './auth.guard';
 
 export const routes: Routes = [
   {
     path: 'restaurants',
     loadChildren: () => import('./restaurants/restaurants.routes').then(mod => mod.routes),
+    canActivate: [loggedInGuard],
   },
   {
     path: 'dishes',
     loadChildren: () => import('./dishes/dishes.routes').then(mod => mod.routes),
+    canActivate: [loggedInGuard]
   },
   {
     path: 'user',
