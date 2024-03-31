@@ -1,3 +1,10 @@
+# [1.3.0](https://github.com/jensboe/doener/compare/v1.2.0...v1.3.0) (2024-03-31)
+
+
+### Features
+
+* **user:** Add user login/register/logout functions ([#34](https://github.com/jensboe/doener/issues/34)) ([85a26d4](https://github.com/jensboe/doener/commit/85a26d44d8e958f171fb6d28c11d8d2ef9afefa7))
+
 # [1.2.0](https://github.com/jensboe/doener/compare/v1.1.0...v1.2.0) (2024-03-30)
 
 
