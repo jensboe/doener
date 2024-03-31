@@ -5,16 +5,16 @@
       [opened]="(isHandset$ | async) === false">
     <mat-toolbar>Menu</mat-toolbar>
     <mat-nav-list>
-      <a mat-list-item routerLink="/restaurants/list" routerLinkActive="active" i18n>list restaurant</a>
-      <a mat-list-item routerLink="/restaurants/add" routerLinkActive="active" i18n>add restaurant</a>
-      <a mat-list-item routerLink="/dishes/list" routerLinkActive="active" i18n>list dishes</a>
-      <a mat-list-item routerLink="/dishes/add" routerLinkActive="active" i18n>add dishes</a>
-      <a mat-list-item routerLink="/orders/list" routerLinkActive="active" i18n>list orders</a>
-      <a mat-list-item routerLink="/orders/add" routerLinkActive="active" i18n>add orders</a>
-      <a mat-list-item routerLink="user/detail" routerLinkActive="active" i18n>user detail</a>
-      <a mat-list-item (click)="auth.logout()" i18n>Logout</a>
-      <a mat-list-item routerLink="user/login" routerLinkActive="active" i18n>login</a>
-      <a mat-list-item routerLink="user/register" routerLinkActive="active" i18n>register</a>
+      <a mat-list-item *ngIf="(auth.loggedIn$ | async)" routerLink="/restaurants/list" routerLinkActive="active" i18n>list restaurant</a>
+      <a mat-list-item *ngIf="(auth.loggedIn$ | async)" routerLink="/restaurants/add" routerLinkActive="active" i18n>add restaurant</a>
+      <a mat-list-item *ngIf="(auth.loggedIn$ | async)" routerLink="/dishes/list" routerLinkActive="active" i18n>list dishes</a>
+      <a mat-list-item *ngIf="(auth.loggedIn$ | async)" routerLink="/dishes/add" routerLinkActive="active" i18n>add dishes</a>
+      <a mat-list-item *ngIf="(auth.loggedIn$ | async)" routerLink="/orders/list" routerLinkActive="active" i18n>list orders</a>
+      <a mat-list-item *ngIf="(auth.loggedIn$ | async)" routerLink="/orders/add" routerLinkActive="active" i18n>add orders</a>
+      <a mat-list-item *ngIf="(auth.loggedIn$ | async)" routerLink="user/detail" routerLinkActive="active" i18n>user detail</a>
+      <a mat-list-item *ngIf="(auth.loggedIn$ | async)" (click)="auth.logout()" i18n>Logout</a>
+      <a mat-list-item *ngIf="!(auth.loggedIn$ | async)" routerLink="user/login" routerLinkActive="active" i18n>login</a>
+      <a mat-list-item *ngIf="!(auth.loggedIn$ | async)" routerLink="user/register" routerLinkActive="active" i18n>register</a>
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
