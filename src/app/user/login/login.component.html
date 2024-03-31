@@ -1,0 +1,26 @@
+<div *ngIf="(auth.loggedIn$ | async) === false">
+  <p>
+    <mat-form-field>
+      <mat-label>Input</mat-label>
+      <input matInput [(ngModel)]="email">
+    </mat-form-field>
+  </p>
+  <p>
+    <mat-form-field>
+      <mat-label>Enter your password</mat-label>
+      <input matInput [type]="hide ? 'password' : 'text'" [(ngModel)]="password">
+      <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
+        [attr.aria-pressed]="hide">
+        <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+      </button>
+    </mat-form-field>
+  </p>
+  <p>
+    <button mat-raised-button (click)="login()">Login</button>
+  </p>
+</div>
+<div *ngIf="(auth.loggedIn$ | async)">
+  <p>
+    <button mat-raised-button (click)="logout()">Logout</button>
+  </p>
+</div>
