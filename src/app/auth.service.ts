@@ -8,8 +8,8 @@ import { BehaviorSubject,  } from 'rxjs';
   providedIn: 'root'
 })
 export class AuthService {
-  loggedIn = new BehaviorSubject<boolean>(false);
-  loggedOut = new BehaviorSubject<boolean>(false);
+  private loggedIn = new BehaviorSubject<boolean>(false);
+  private loggedOut = new BehaviorSubject<boolean>(true);
   loggedIn$ = this.loggedIn.asObservable();
   loggedOut$ = this.loggedOut.asObservable();
 
