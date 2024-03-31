@@ -2,12 +2,13 @@ import { TestBed } from '@angular/core/testing';
 
 import { AuthService } from './auth.service';
 import { Auth } from '@angular/fire/auth';
+import { of } from 'rxjs';
 
 describe('AuthService', () => {
   let service: AuthService;
 
   const AuthStub = {
-    onAuthStateChanged: () => of('You have been warned'),
+    onAuthStateChanged: () => of(true),
   };
 
   beforeEach(() => {
