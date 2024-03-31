@@ -7,12 +7,17 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { AppComponent } from './app.component';
 import { RouterModule, provideRouter } from '@angular/router';
+import { AuthService } from './auth.service';
+import { of } from 'rxjs';
 
 
 
 describe('BaseComponent', () => {
   let component: AppComponent;
   let fixture: ComponentFixture<AppComponent>;
+  const  AuthServiceStub: Partial<AuthService> = {
+    loggedIn$: of(true)
+  }
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
@@ -27,7 +32,8 @@ describe('BaseComponent', () => {
         AppComponent,
     ],
     providers: [
-        provideRouter([{ path: '', component: AppComponent }])
+        provideRouter([{ path: '', component: AppComponent }]),
+        { provide: AuthService, useValue: AuthServiceStub }
     ]
 }).compileComponents();
   }));
