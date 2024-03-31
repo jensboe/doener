@@ -1,16 +1,20 @@
-// import { TestBed } from '@angular/core/testing';
+import { TestBed } from '@angular/core/testing';
 
-// import { FirestoreService } from './firestore.service';
+import { FirestoreService } from './firestore.service';
+import { Firestore } from '@angular/fire/firestore';
 
-// describe('FirestoreService', () => {
-//   let service: FirestoreService;
+describe('DishFirestoreService', () => {
+  let service: FirestoreService;
+  const FireStoreStub = jasmine.createSpyObj('Firestore', ['dummy']);
 
-//   beforeEach(() => {
-//     TestBed.configureTestingModule({});
-//     service = TestBed.inject(FirestoreService);
-//   });
+  beforeEach(() => {
+    TestBed.configureTestingModule({
+        providers: [{ provide: Firestore, useValue: FireStoreStub }]
+    });
+    service = TestBed.inject(FirestoreService);
+  });
 
-//   it('should be created', () => {
-//     expect(service).toBeTruthy();
-//   });
-// });
+  it('should be created', () => {
+    expect(service).toBeTruthy();
+  });
+});
