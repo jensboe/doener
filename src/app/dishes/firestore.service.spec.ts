@@ -9,7 +9,7 @@ describe('DishFirestoreService', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-        providers: [{ provide: Firestore, useValue: FireStoreStub }]
+      providers: [{ provide: Firestore, useValue: FireStoreStub }],
     });
     service = TestBed.inject(FirestoreService);
   });

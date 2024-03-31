@@ -11,14 +11,10 @@ describe('AddDishesComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [
-        AddComponent,
-        BrowserAnimationsModule
-    ],
+      imports: [AddComponent, BrowserAnimationsModule],
       providers: [{ provide: FirestoreService, useValue: FirestoreStub }],
-    })
-    .compileComponents();
-    
+    }).compileComponents();
+
     fixture = TestBed.createComponent(AddComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();

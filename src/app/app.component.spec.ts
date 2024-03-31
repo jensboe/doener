@@ -10,18 +10,16 @@ import { RouterModule, provideRouter } from '@angular/router';
 import { AuthService } from './auth.service';
 import { of } from 'rxjs';
 
-
-
 describe('BaseComponent', () => {
   let component: AppComponent;
   let fixture: ComponentFixture<AppComponent>;
-  const  AuthServiceStub: Partial<AuthService> = {
-    loggedIn$: of(true)
-  }
+  const AuthServiceStub: Partial<AuthService> = {
+    loggedIn$: of(true),
+  };
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-    imports: [
+      imports: [
         NoopAnimationsModule,
         MatButtonModule,
         MatIconModule,
@@ -30,12 +28,12 @@ describe('BaseComponent', () => {
         MatToolbarModule,
         RouterModule,
         AppComponent,
-    ],
-    providers: [
+      ],
+      providers: [
         provideRouter([{ path: '', component: AppComponent }]),
-        { provide: AuthService, useValue: AuthServiceStub }
-    ]
-}).compileComponents();
+        { provide: AuthService, useValue: AuthServiceStub },
+      ],
+    }).compileComponents();
   }));
 
   beforeEach(() => {

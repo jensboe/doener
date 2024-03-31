@@ -1,20 +1,94 @@
 <mat-sidenav-container class="sidenav-container">
-  <mat-sidenav #drawer class="sidenav" fixedInViewport
-      [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
-      [mode]="(isHandset$ | async) ? 'over' : 'side'"
-      [opened]="(isHandset$ | async) === false">
+  <mat-sidenav
+    #drawer
+    class="sidenav"
+    fixedInViewport
+    [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+    [mode]="(isHandset$ | async) ? 'over' : 'side'"
+    [opened]="(isHandset$ | async) === false"
+  >
     <mat-toolbar>Menu</mat-toolbar>
     <mat-nav-list>
-      <a mat-list-item *ngIf="(auth.loggedIn$ | async)" routerLink="/restaurants/list" routerLinkActive="active" i18n>list restaurant</a>
-      <a mat-list-item *ngIf="(auth.loggedIn$ | async)" routerLink="/restaurants/add" routerLinkActive="active" i18n>add restaurant</a>
-      <a mat-list-item *ngIf="(auth.loggedIn$ | async)" routerLink="/dishes/list" routerLinkActive="active" i18n>list dishes</a>
-      <a mat-list-item *ngIf="(auth.loggedIn$ | async)" routerLink="/dishes/add" routerLinkActive="active" i18n>add dishes</a>
-      <a mat-list-item *ngIf="(auth.loggedIn$ | async)" routerLink="/orders/list" routerLinkActive="active" i18n>list orders</a>
-      <a mat-list-item *ngIf="(auth.loggedIn$ | async)" routerLink="/orders/add" routerLinkActive="active" i18n>add orders</a>
-      <a mat-list-item *ngIf="(auth.loggedIn$ | async)" routerLink="user/detail" routerLinkActive="active" i18n>user detail</a>
-      <a mat-list-item *ngIf="(auth.loggedIn$ | async) === false" routerLink="user/login" routerLinkActive="active" i18n>login</a>
-      <a mat-list-item *ngIf="(auth.loggedIn$ | async) === false" routerLink="user/register" routerLinkActive="active" i18n>register</a>
-      <button mat-list-item *ngIf="(auth.loggedIn$ | async)" (click)="auth.logout()" i18n>Logout</button>
+      <a
+        mat-list-item
+        *ngIf="auth.loggedIn$ | async"
+        routerLink="/restaurants/list"
+        routerLinkActive="active"
+        i18n
+        >list restaurant</a
+      >
+      <a
+        mat-list-item
+        *ngIf="auth.loggedIn$ | async"
+        routerLink="/restaurants/add"
+        routerLinkActive="active"
+        i18n
+        >add restaurant</a
+      >
+      <a
+        mat-list-item
+        *ngIf="auth.loggedIn$ | async"
+        routerLink="/dishes/list"
+        routerLinkActive="active"
+        i18n
+        >list dishes</a
+      >
+      <a
+        mat-list-item
+        *ngIf="auth.loggedIn$ | async"
+        routerLink="/dishes/add"
+        routerLinkActive="active"
+        i18n
+        >add dishes</a
+      >
+      <a
+        mat-list-item
+        *ngIf="auth.loggedIn$ | async"
+        routerLink="/orders/list"
+        routerLinkActive="active"
+        i18n
+        >list orders</a
+      >
+      <a
+        mat-list-item
+        *ngIf="auth.loggedIn$ | async"
+        routerLink="/orders/add"
+        routerLinkActive="active"
+        i18n
+        >add orders</a
+      >
+      <a
+        mat-list-item
+        *ngIf="auth.loggedIn$ | async"
+        routerLink="user/detail"
+        routerLinkActive="active"
+        i18n
+        >user detail</a
+      >
+      <a
+        mat-list-item
+        *ngIf="(auth.loggedIn$ | async) === false"
+        routerLink="user/login"
+        routerLinkActive="active"
+        i18n
+        >login</a
+      >
+      <a
+        mat-list-item
+        *ngIf="(auth.loggedIn$ | async) === false"
+        routerLink="user/register"
+        routerLinkActive="active"
+        i18n
+        >register</a
+      >
+      <button
+        mat-list-item
+        *ngIf="auth.loggedIn$ | async"
+        (click)="auth.logout()"
+        i18n
+      >
+        Logout
+      </button>
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
@@ -24,11 +98,12 @@
           type="button"
           aria-label="Toggle sidenav"
           mat-icon-button
-          (click)="drawer.toggle()">
+          (click)="drawer.toggle()"
+        >
           <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
         </button>
       }
-      <span>doener &#64;v{{version}}</span>
+      <span>doener &#64;v{{ version }}</span>
     </mat-toolbar>
     <router-outlet />
   </mat-sidenav-content>

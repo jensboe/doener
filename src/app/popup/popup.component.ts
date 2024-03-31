@@ -14,9 +14,9 @@ export interface PopupData {
   title: string;
   content?: string;
   actions: {
-    name: string,
-    default?: boolean
-  }[]
+    name: string;
+    default?: boolean;
+  }[];
 }
 
 @Component({
@@ -28,12 +28,11 @@ export interface PopupData {
     MatDialogContent,
     MatDialogActions,
     MatDialogClose,
-    MatButton
+    MatButton,
   ],
   templateUrl: './popup.component.html',
-  styleUrl: './popup.component.css'
+  styleUrl: './popup.component.css',
 })
-
 export class PopupComponent {
   constructor(
     public dialogRef: MatDialogRef<PopupComponent>,

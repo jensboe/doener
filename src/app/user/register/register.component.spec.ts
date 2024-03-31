@@ -9,19 +9,15 @@ describe('RegisterComponent', () => {
   let component: RegisterComponent;
   let fixture: ComponentFixture<RegisterComponent>;
   const AuthServiceStub: Partial<AuthService> = {
-    loggedIn$: of(true)
-  }
+    loggedIn$: of(true),
+  };
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [
-        RegisterComponent,
-        BrowserAnimationsModule
-      ],
+      imports: [RegisterComponent, BrowserAnimationsModule],
       providers: [{ provide: AuthService, useValue: AuthServiceStub }],
-    })
-    .compileComponents();
-    
+    }).compileComponents();
+
     fixture = TestBed.createComponent(RegisterComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();

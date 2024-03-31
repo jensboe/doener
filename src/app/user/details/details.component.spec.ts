@@ -7,9 +7,7 @@ describe('DetailsComponent', () => {
   let component: DetailsComponent;
   let fixture: ComponentFixture<DetailsComponent>;
 
-  const  AuthServiceStub: Partial<AuthService> = {
-  }
-
+  const AuthServiceStub: Partial<AuthService> = {};
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({

@@ -7,20 +7,21 @@ import { of } from 'rxjs';
 describe('ListDishesComponent', () => {
   let component: ListComponent;
   let fixture: ComponentFixture<ListComponent>;
-  
-  const  FirestoreServiceStub: Partial<FirestoreService> = {
+
+  const FirestoreServiceStub: Partial<FirestoreService> = {
     getDishes() {
-        return of()
-    }
-  }
+      return of();
+    },
+  };
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [ListComponent],
-      providers: [{ provide: FirestoreService, useValue: FirestoreServiceStub }],
-    })
-    .compileComponents();
-    
+      providers: [
+        { provide: FirestoreService, useValue: FirestoreServiceStub },
+      ],
+    }).compileComponents();
+
     fixture = TestBed.createComponent(ListComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();

@@ -20,37 +20,34 @@ import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
     MatInputModule,
     MatIconModule,
     MatButtonModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
   ],
   templateUrl: './register.component.html',
-  styleUrl: './register.component.css'
+  styleUrl: './register.component.css',
 })
 export class RegisterComponent {
-
-  auth = inject(AuthService)
-  formBuilder = inject(FormBuilder)
+  auth = inject(AuthService);
+  formBuilder = inject(FormBuilder);
   hide = true;
   registerform = this.formBuilder.group({
-    email: ['', [
-      Validators.required,
-      Validators.email
-    ]],
+    email: ['', [Validators.required, Validators.email]],
     displayname: ['', Validators.required],
-    password: ['',
-    [
-      Validators.required,
-      Validators.minLength(8)
-    ]]
+    password: ['', [Validators.required, Validators.minLength(8)]],
   });
 
   register() {
-    if(this.registerform.valid)
-    {
-      if(this.registerform.value.email && this.registerform.value.password && this.registerform.value.displayname)
-      {
-        this.auth.register(this.registerform.value.email, this.registerform.value.password, this.registerform.value.displayname)
+    if (this.registerform.valid) {
+      if (
+        this.registerform.value.email &&
+        this.registerform.value.password &&
+        this.registerform.value.displayname
+      ) {
+        this.auth.register(
+          this.registerform.value.email,
+          this.registerform.value.password,
+          this.registerform.value.displayname,
+        );
       }
     }
   }
-
 }
