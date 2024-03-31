@@ -1,6 +1,6 @@
 import { Component, inject } from '@angular/core';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
-import { Observable, Subscription } from 'rxjs';
+import { Observable } from 'rxjs';
 import { map, shareReplay } from 'rxjs/operators';
 import packageJson from '../../package.json';
 import { CommonModule } from '@angular/common';

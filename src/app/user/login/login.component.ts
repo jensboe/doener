@@ -1,9 +1,8 @@
 import { CommonModule } from '@angular/common';
-import { Component, OnDestroy, inject } from '@angular/core';
-import { AuthModule, Auth, User, user, signInWithEmailAndPassword, signOut } from '@angular/fire/auth';
+import { Component, inject } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
-import { MatFormFieldModule, MatLabel } from '@angular/material/form-field';
+import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
 import { AuthService } from '../../auth.service';
@@ -24,7 +23,7 @@ import { Router } from '@angular/router';
   templateUrl: './login.component.html',
   styleUrl: './login.component.css'
 })
-export class LoginComponent implements OnDestroy{
+export class LoginComponent{
   public auth: AuthService = inject(AuthService);
   private router: Router = inject(Router)
 
@@ -37,13 +36,9 @@ export class LoginComponent implements OnDestroy{
     this.password ='';
   }
 
-
-  ngOnDestroy() {
-
-  }
   login() {
     this.auth.login(this.email, this.password)
-    .then((bla) => {
+    .then(() => {
       this.router.navigate(['restaurants/list'])
     })
     .catch(err => {
